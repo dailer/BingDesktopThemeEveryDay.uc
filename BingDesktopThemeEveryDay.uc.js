@@ -62,7 +62,7 @@ xhr.onload=function()
 				var path = Components.classes["@mozilla.org/file/directory_service;1"].getService(Components.interfaces.nsIProperties).get("ProfLD", Components.interfaces.nsILocalFile).path + "\\必应美图\\" + enddate+'-'+name.replace(/ \(.*?\)/g,'')+ ".jpg";
 				file.initWithPath(path);
 				file.create(Components.interfaces.nsIFile.NOMAL_FILE_TYPE, 0777)		
-				Components.classes["@mozilla.org/embedding/browser/nsWebBrowserPersist;1"].createInstance(Components.interfaces.nsIWebBrowserPersist).saveURI(Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI(ddd, null, null), null, null, null, null, file, null);
+				Components.classes["@mozilla.org/embedding/browser/nsWebBrowserPersist;1"].createInstance(Components.interfaces.nsIWebBrowserPersist).saveURI(Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI(ddd, null, null), null, null, null, null,null, file, null);
 				}catch(err){alert(err)};
 				
 				}
